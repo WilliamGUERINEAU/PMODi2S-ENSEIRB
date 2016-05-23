@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/William/Desktop/Projet VHDL/Test_Stereo/I2Spmodtet_isim_beh.exe" -prj "C:/Users/William/Desktop/Projet VHDL/Test_Stereo/I2Spmodtet_beh.prj" "work.I2Spmodtet" 

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\William\Desktop\Projet VHDL\Test_Stereo\Top_module_VGA.ncd
+OUTFILE=C:\Users\William\Desktop\Projet VHDL\Test_Stereo\Top_module_VGA.bit
+FAMILY=Artix7
+PART=xc7a100t-3csg324
+WORKINGDIR=C:\Users\William\Desktop\Projet VHDL\Test_Stereo
+LICENSE=WebPack
+USER_INFO=210963000_0_0_915

@@ -1,0 +1,1 @@
+vhdtdtfi -prj Test_Stereo -o "C:/Users/wenbo/Desktop/xuexi/2A/S8/Projet VHDL/Test_Stereo_with filters/Test_Stereo/select_input.vhi" -module select_input -template E:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work select_input.vhd 

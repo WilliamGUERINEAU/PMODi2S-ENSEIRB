@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "C:/Users/William/Desktop/tout_fonctionnel/Test_Stereo/I2S_pmod.xst" -ofn "C:/Users/William/Desktop/tout_fonctionnel/Test_Stereo/I2S_pmod.syr" 
+xst -intstyle ise -ifn "C:/Users/William/Desktop/tout_fonctionnel/Test_Stereo/I2S_pmod.xst" -ofn "C:/Users/William/Desktop/tout_fonctionnel/Test_Stereo/I2S_pmod.syr" 
+xst -intstyle ise -ifn "C:/Users/William/Desktop/tout_fonctionnel/Test_Stereo/I2S_pmod.xst" -ofn "C:/Users/William/Desktop/tout_fonctionnel/Test_Stereo/I2S_pmod.syr" 
+xst -intstyle ise -ifn "C:/Users/William/Desktop/tout_fonctionnel/Test_Stereo/I2S_pmod.xst" -ofn "C:/Users/William/Desktop/tout_fonctionnel/Test_Stereo/I2S_pmod.syr" 

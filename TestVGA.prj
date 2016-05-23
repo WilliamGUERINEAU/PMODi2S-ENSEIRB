@@ -1,0 +1,6 @@
+vhdl work "Window.vhd"
+vhdl work "vga_bitmap_320x240.vhd"
+vhdl work "ScreenPainting.vhd"
+vhdl work "Top_module_VGA.vhd"
+vhdl work "Screen_buffer.vhd"
+vhdl work "TestVGA.vhd"

@@ -1,0 +1,16 @@
+# Output products list for <BassBoost>
+BassBoost.asy
+BassBoost.gise
+BassBoost.mif
+BassBoost.ngc
+BassBoost.sym
+BassBoost.vhd
+BassBoost.vho
+BassBoost.xco
+BassBoost.xise
+BassBoostCOEFF_auto0_0.mif
+BassBoost_flist.txt
+BassBoost_readme.txt
+BassBoost_xmdf.tcl
+BassBoostfilt_decode_rom.mif
+_xmsgs\pn_parser.xmsgs

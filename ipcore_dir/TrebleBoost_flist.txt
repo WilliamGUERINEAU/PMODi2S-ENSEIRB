@@ -1,0 +1,16 @@
+# Output products list for <TrebleBoost>
+TrebleBoost.asy
+TrebleBoost.gise
+TrebleBoost.mif
+TrebleBoost.ngc
+TrebleBoost.sym
+TrebleBoost.vhd
+TrebleBoost.vho
+TrebleBoost.xco
+TrebleBoost.xise
+TrebleBoostCOEFF_auto0_0.mif
+TrebleBoost_flist.txt
+TrebleBoost_readme.txt
+TrebleBoost_xmdf.tcl
+TrebleBoostfilt_decode_rom.mif
+_xmsgs\pn_parser.xmsgs

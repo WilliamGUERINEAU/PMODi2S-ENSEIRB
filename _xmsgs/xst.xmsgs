@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\William\Desktop\tout_fonctionnel\Test_Stereo\Linked.vhd</arg>&quot; line <arg fmt="%s" index="2">284</arg>: Output port &lt;<arg fmt="%s" index="3">rfd</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Bass</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\William\Desktop\tout_fonctionnel\Test_Stereo\Linked.vhd</arg>&quot; line <arg fmt="%s" index="2">284</arg>: Output port &lt;<arg fmt="%s" index="3">rdy</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Bass</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\William\Desktop\tout_fonctionnel\Test_Stereo\Linked.vhd</arg>&quot; line <arg fmt="%s" index="2">292</arg>: Output port &lt;<arg fmt="%s" index="3">rfd</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Treble</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\William\Desktop\tout_fonctionnel\Test_Stereo\Linked.vhd</arg>&quot; line <arg fmt="%s" index="2">292</arg>: Output port &lt;<arg fmt="%s" index="3">rdy</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Treble</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">RAM</arg>&gt;, simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">RAM</arg>&gt;, simulation mismatch.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\William\Desktop\tout_fonctionnel\Test_Stereo\Top_module_VGA.vhd</arg>&quot; line <arg fmt="%s" index="2">102</arg>: Output port &lt;<arg fmt="%s" index="3">data_out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">GA</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">screen</arg>&gt;, simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">X_start&lt;4&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="info" file="Xst" num="1767" delta="old" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">VGA_blue_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">GA</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;VGA_blue_1&gt; &lt;VGA_blue_2&gt; &lt;VGA_blue_3&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">VGA_red_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">GA</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;VGA_red_1&gt; &lt;VGA_red_2&gt; &lt;VGA_red_3&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">VGA_green_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">GA</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;VGA_green_1&gt; &lt;VGA_green_2&gt; &lt;VGA_green_3&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">X_data_8</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">buff</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">X_data_8</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">buff2</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="2404" delta="old" > FFs/Latches &lt;<arg fmt="%s" index="1">X_data</arg>&lt;<arg fmt="%d" index="2">8</arg>:<arg fmt="%d" index="3">8</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">Screen_buffer</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">Mram_RAM</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">Mram_RAM</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">Mram_RAM</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">Mram_screen</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">VGA_blue_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">VGA_bitmap_320x240</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;VGA_blue_1&gt; &lt;VGA_blue_2&gt; &lt;VGA_blue_3&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">VGA_red_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">VGA_bitmap_320x240</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;VGA_red_1&gt; &lt;VGA_red_2&gt; &lt;VGA_red_3&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">VGA_green_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">VGA_bitmap_320x240</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;VGA_green_1&gt; &lt;VGA_green_2&gt; &lt;VGA_green_3&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">inst_LPM_FF</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">GA</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">sck_count_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Clock_manag</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;lrck_count_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">sck_count_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Clock_manag</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;lrck_count_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">sck_count_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">Clock_manag</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;lrck_count_2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">adresse_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">SP</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;X_work_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">adresse_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">SP</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;X_work_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">adresse_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">SP</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;X_work_2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">adresse_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">SP</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;X_work_3&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">adresse_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">SP</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;X_work_4&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">adresse_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">SP</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;X_work_5&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2260" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">blk00000015</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">blk00000003</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg> : <arg fmt="%s" index="4">&lt;blk00000016&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2260" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">blk00000015</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">blk00000003</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg> : <arg fmt="%s" index="4">&lt;blk00000016&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2260" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">blk00000015</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">blk00000003</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg> : <arg fmt="%s" index="4">&lt;blk00000016&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+</msg>
+
+</messages>
+

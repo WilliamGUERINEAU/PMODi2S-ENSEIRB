@@ -1,0 +1,722 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Reading design: TestVGA.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "TestVGA.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "TestVGA"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : TestVGA
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : Soft
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\William\Desktop\tout_fonctionnel\Test_Stereo\Window.vhd" into library work
+Parsing entity <window>.
+Parsing architecture <Behavioral> of entity <window>.
+Parsing VHDL file "C:\Users\William\Desktop\tout_fonctionnel\Test_Stereo\vga_bitmap_320x240.vhd" into library work
+Parsing entity <VGA_bitmap_320x240>.
+Parsing architecture <Behavioral> of entity <vga_bitmap_320x240>.
+Parsing VHDL file "C:\Users\William\Desktop\tout_fonctionnel\Test_Stereo\ScreenPainting.vhd" into library work
+Parsing entity <ScreenPainting>.
+Parsing architecture <Behavioral> of entity <screenpainting>.
+Parsing VHDL file "C:\Users\William\Desktop\tout_fonctionnel\Test_Stereo\Top_module_VGA.vhd" into library work
+Parsing entity <Top_module_VGA>.
+Parsing architecture <Behavioral> of entity <top_module_vga>.
+Parsing VHDL file "C:\Users\William\Desktop\tout_fonctionnel\Test_Stereo\Screen_buffer.vhd" into library work
+Parsing entity <Screen_buffer>.
+Parsing architecture <Behavioral> of entity <screen_buffer>.
+Parsing VHDL file "C:\Users\William\Desktop\tout_fonctionnel\Test_Stereo\TestVGA.vhd" into library work
+Parsing entity <TestVGA>.
+Parsing architecture <Behavioral> of entity <testvga>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <TestVGA> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Screen_buffer> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Top_module_VGA> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <VGA_bitmap_320x240> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <ScreenPainting> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <window> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <TestVGA>.
+    Related source file is "C:\Users\William\Desktop\tout_fonctionnel\Test_Stereo\TestVGA.vhd".
+    Summary:
+	no macro.
+Unit <TestVGA> synthesized.
+
+Synthesizing Unit <Screen_buffer>.
+    Related source file is "C:\Users\William\Desktop\tout_fonctionnel\Test_Stereo\Screen_buffer.vhd".
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <RAM>, simulation mismatch.
+    Found 200x8-bit single-port RAM <Mram_RAM> for signal <RAM>.
+    Found 1-bit register for signal <first_front>.
+    Found 8-bit register for signal <writing>.
+    Found 8-bit register for signal <reading>.
+    Found 1-bit register for signal <data_send_temp>.
+    Found 9-bit register for signal <X_data>.
+    Found 8-bit register for signal <Y_data>.
+    Found 17-bit adder for signal <rescaling> created at line 46.
+    Found 8-bit adder for signal <writing[7]_GND_5_o_add_9_OUT> created at line 73.
+    Found 8-bit adder for signal <reading[7]_GND_5_o_add_14_OUT> created at line 114.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred  35 D-type flip-flop(s).
+	inferred   5 Multiplexer(s).
+Unit <Screen_buffer> synthesized.
+
+Synthesizing Unit <Top_module_VGA>.
+    Related source file is "C:\Users\William\Desktop\tout_fonctionnel\Test_Stereo\Top_module_VGA.vhd".
+INFO:Xst:3210 - "C:\Users\William\Desktop\tout_fonctionnel\Test_Stereo\Top_module_VGA.vhd" line 102: Output port <data_out> of the instance <GA> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <Top_module_VGA> synthesized.
+
+Synthesizing Unit <VGA_bitmap_320x240>.
+    Related source file is "C:\Users\William\Desktop\tout_fonctionnel\Test_Stereo\vga_bitmap_320x240.vhd".
+        bit_per_pixel = 2
+        grayscale = false
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <screen>, simulation mismatch.
+    Found 76800x2-bit dual-port RAM <Mram_screen> for signal <screen>.
+    Found 2-bit register for signal <data_out>.
+    Found 17-bit register for signal <pix_read_addr>.
+    Found 1-bit register for signal <VGA_vs>.
+    Found 1-bit register for signal <TOP_display>.
+    Found 4-bit register for signal <VGA_red>.
+    Found 4-bit register for signal <VGA_green>.
+    Found 4-bit register for signal <VGA_blue>.
+    Found 1-bit register for signal <VGA_hs>.
+    Found 1-bit register for signal <TOP_line>.
+    Found 12-bit register for signal <h_counter>.
+    Found 10-bit register for signal <v_counter>.
+    Found 2-bit register for signal <next_pixel>.
+    Found 17-bit adder for signal <pix_read_addr[16]_GND_8_o_add_6_OUT> created at line 82.
+    Found 10-bit adder for signal <v_counter[9]_GND_8_o_add_40_OUT> created at line 260.
+    Found 12-bit adder for signal <h_counter[11]_GND_8_o_add_42_OUT> created at line 263.
+    Found 17-bit subtractor for signal <GND_8_o_GND_8_o_sub_10_OUT<16:0>> created at line 86.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred  59 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <VGA_bitmap_320x240> synthesized.
+
+Synthesizing Unit <ScreenPainting>.
+    Related source file is "C:\Users\William\Desktop\tout_fonctionnel\Test_Stereo\ScreenPainting.vhd".
+    Found 8-bit register for signal <Y_work>.
+    Found 17-bit register for signal <adresse>.
+    Found 9-bit register for signal <X_work>.
+    Found 8-bit adder for signal <Y_work[7]_GND_9_o_add_2_OUT> created at line 46.
+    Found 9-bit adder for signal <X_work[8]_GND_9_o_add_4_OUT> created at line 51.
+    Found 17-bit adder for signal <adresse[16]_GND_9_o_add_5_OUT> created at line 52.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  34 D-type flip-flop(s).
+	inferred   4 Multiplexer(s).
+Unit <ScreenPainting> synthesized.
+
+Synthesizing Unit <window>.
+    Related source file is "C:\Users\William\Desktop\tout_fonctionnel\Test_Stereo\Window.vhd".
+    Found 2-bit register for signal <data_in>.
+    Found 1-bit register for signal <data_write>.
+    Found 11-bit subtractor for signal <GND_10_o_GND_10_o_sub_22_OUT> created at line 82.
+    Found 10-bit subtractor for signal <GND_10_o_GND_10_o_sub_28_OUT> created at line 86.
+    Found 9-bit subtractor for signal <GND_10_o_GND_10_o_sub_36_OUT> created at line 86.
+    Found 9-bit subtractor for signal <GND_10_o_GND_10_o_sub_52_OUT> created at line 86.
+    Found 10-bit subtractor for signal <GND_10_o_GND_10_o_sub_76_OUT> created at line 112.
+    Found 10-bit adder for signal <n0204> created at line 82.
+    Found 10-bit adder for signal <n0292[9:0]> created at line 82.
+    Found 10-bit adder for signal <n0227> created at line 86.
+    Found 11-bit adder for signal <n0236> created at line 86.
+    Found 10-bit adder for signal <n0245> created at line 86.
+    Found 10-bit adder for signal <n0247> created at line 91.
+    Found 9-bit adder for signal <n0250> created at line 91.
+    Found 10-bit adder for signal <n0253> created at line 95.
+    Found 9-bit adder for signal <n0256> created at line 95.
+    Found 9-bit adder for signal <n0211> created at line 112.
+    Found 9-bit adder for signal <n0229> created at line 112.
+WARNING:Xst:737 - Found 1-bit latch for signal <X_start<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 10-bit comparator equal for signal <BUS_0004_GND_10_o_equal_18_o> created at line 82
+    Found 11-bit comparator equal for signal <GND_10_o_GND_10_o_equal_23_o> created at line 82
+    Found 8-bit comparator equal for signal <Y_start[7]_Y_pos_int[7]_equal_25_o> created at line 86
+    Found 9-bit comparator equal for signal <BUS_0007_GND_10_o_equal_27_o> created at line 86
+    Found 10-bit comparator greater for signal <GND_10_o_GND_10_o_LessThan_29_o> created at line 86
+    Found 9-bit comparator greater for signal <GND_10_o_GND_10_o_LessThan_37_o> created at line 86
+    Found 10-bit comparator greater for signal <GND_10_o_BUS_0012_LessThan_40_o> created at line 86
+    Found 8-bit comparator equal for signal <Y_start2[7]_Y_pos_int[7]_equal_41_o> created at line 86
+    Found 9-bit comparator equal for signal <BUS_0013_GND_10_o_equal_43_o> created at line 86
+    Found 11-bit comparator greater for signal <GND_10_o_BUS_0015_LessThan_48_o> created at line 86
+    Found 9-bit comparator equal for signal <X_start2[8]_X_pos_int[8]_equal_49_o> created at line 86
+    Found 10-bit comparator equal for signal <BUS_0016_GND_10_o_equal_51_o> created at line 86
+    Found 9-bit comparator greater for signal <GND_10_o_GND_10_o_LessThan_53_o> created at line 86
+    Found 10-bit comparator greater for signal <GND_10_o_BUS_0018_LessThan_56_o> created at line 86
+    Found 10-bit comparator equal for signal <BUS_0019_GND_10_o_equal_58_o> created at line 91
+    Found 9-bit comparator equal for signal <BUS_0020_GND_10_o_equal_60_o> created at line 91
+    Found 10-bit comparator equal for signal <BUS_0021_GND_10_o_equal_62_o> created at line 95
+    Found 9-bit comparator equal for signal <BUS_0022_GND_10_o_equal_64_o> created at line 95
+    Found 10-bit comparator greater for signal <GND_10_o_GND_10_o_LessThan_77_o> created at line 112
+    Found 8-bit comparator greater for signal <Y_start[7]_Y_pos_int[7]_LessThan_80_o> created at line 112
+    Found 9-bit comparator greater for signal <GND_10_o_BUS_0024_LessThan_82_o> created at line 112
+    Found 10-bit comparator greater for signal <GND_10_o_BUS_0027_LessThan_93_o> created at line 112
+    Found 8-bit comparator greater for signal <Y_start2[7]_Y_pos_int[7]_LessThan_94_o> created at line 112
+    Found 9-bit comparator greater for signal <GND_10_o_BUS_0028_LessThan_96_o> created at line 112
+    Summary:
+	inferred  16 Adder/Subtractor(s).
+	inferred   3 D-type flip-flop(s).
+	inferred   1 Latch(s).
+	inferred  24 Comparator(s).
+	inferred   3 Multiplexer(s).
+Unit <window> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 200x8-bit single-port RAM                             : 2
+ 76800x2-bit dual-port RAM                             : 1
+# Adders/Subtractors                                   : 28
+ 10-bit adder                                          : 7
+ 10-bit subtractor                                     : 2
+ 11-bit adder                                          : 1
+ 11-bit subtractor                                     : 1
+ 12-bit adder                                          : 1
+ 17-bit adder                                          : 3
+ 17-bit addsub                                         : 1
+ 8-bit adder                                           : 5
+ 9-bit adder                                           : 5
+ 9-bit subtractor                                      : 2
+# Registers                                            : 29
+ 1-bit register                                        : 9
+ 10-bit register                                       : 1
+ 12-bit register                                       : 1
+ 17-bit register                                       : 2
+ 2-bit register                                        : 3
+ 4-bit register                                        : 3
+ 8-bit register                                        : 7
+ 9-bit register                                        : 3
+# Latches                                              : 1
+ 1-bit latch                                           : 1
+# Comparators                                          : 24
+ 10-bit comparator equal                               : 4
+ 10-bit comparator greater                             : 5
+ 11-bit comparator equal                               : 1
+ 11-bit comparator greater                             : 1
+ 8-bit comparator equal                                : 2
+ 8-bit comparator greater                              : 2
+ 9-bit comparator equal                                : 5
+ 9-bit comparator greater                              : 4
+# Multiplexers                                         : 18
+ 1-bit 2-to-1 multiplexer                              : 2
+ 17-bit 2-to-1 multiplexer                             : 2
+ 2-bit 2-to-1 multiplexer                              : 3
+ 8-bit 2-to-1 multiplexer                              : 9
+ 9-bit 2-to-1 multiplexer                              : 2
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <VGA_blue_0> in Unit <GA> is equivalent to the following 3 FFs/Latches, which will be removed : <VGA_blue_1> <VGA_blue_2> <VGA_blue_3> 
+INFO:Xst:2261 - The FF/Latch <VGA_red_0> in Unit <GA> is equivalent to the following 3 FFs/Latches, which will be removed : <VGA_red_1> <VGA_red_2> <VGA_red_3> 
+INFO:Xst:2261 - The FF/Latch <VGA_green_0> in Unit <GA> is equivalent to the following 3 FFs/Latches, which will be removed : <VGA_green_1> <VGA_green_2> <VGA_green_3> 
+WARNING:Xst:1710 - FF/Latch <X_data_8> (without init value) has a constant value of 0 in block <buff>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <X_data_8> (without init value) has a constant value of 0 in block <buff2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2404 -  FFs/Latches <X_data<8:8>> (without init value) have a constant value of 0 in block <Screen_buffer>.
+
+Synthesizing (advanced) Unit <ScreenPainting>.
+The following registers are absorbed into counter <adresse>: 1 register on signal <adresse>.
+The following registers are absorbed into counter <Y_work>: 1 register on signal <Y_work>.
+Unit <ScreenPainting> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Screen_buffer>.
+The following registers are absorbed into counter <writing>: 1 register on signal <writing>.
+INFO:Xst:3226 - The RAM <Mram_RAM> will be implemented as a BLOCK RAM, absorbing the following register(s): <Y_data>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 200-word x 8-bit                    |          |
+    |     mode           | no-change                           |          |
+    |     clkA           | connected to signal <clock>         | rise     |
+    |     weA            | connected to signal <data_send_temp> | high     |
+    |     addrA          | connected to signal <adress>        |          |
+    |     diA            | connected to signal <rescaling>     |          |
+    |     doA            | connected to signal <Y_data>        |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <Screen_buffer> synthesized (advanced).
+
+Synthesizing (advanced) Unit <VGA_bitmap_320x240>.
+The following registers are absorbed into counter <h_counter>: 1 register on signal <h_counter>.
+The following registers are absorbed into accumulator <pix_read_addr>: 1 register on signal <pix_read_addr>.
+The following registers are absorbed into counter <v_counter>: 1 register on signal <v_counter>.
+INFO:Xst:3226 - The RAM <Mram_screen> will be implemented as a BLOCK RAM, absorbing the following register(s): <data_out> <next_pixel>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 76800-word x 2-bit                  |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <data_write>    | high     |
+    |     addrA          | connected to signal <ADDR>          |          |
+    |     diA            | connected to signal <data_in>       |          |
+    |     doA            | connected to signal <data_out>      |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 76800-word x 2-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     addrB          | connected to signal <pix_read_addr> |          |
+    |     doB            | connected to signal <next_pixel>    |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <VGA_bitmap_320x240> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 200x8-bit single-port block RAM                       : 2
+ 76800x2-bit dual-port block RAM                       : 1
+# Adders/Subtractors                                   : 21
+ 10-bit adder                                          : 6
+ 10-bit subtractor                                     : 2
+ 11-bit adder                                          : 1
+ 11-bit subtractor                                     : 1
+ 17-bit adder                                          : 2
+ 8-bit adder                                           : 2
+ 9-bit adder                                           : 5
+ 9-bit subtractor                                      : 2
+# Counters                                             : 6
+ 10-bit up counter                                     : 1
+ 12-bit up counter                                     : 1
+ 17-bit up counter                                     : 1
+ 8-bit up counter                                      : 3
+# Accumulators                                         : 1
+ 17-bit updown accumulator                             : 1
+# Registers                                            : 64
+ Flip-Flops                                            : 64
+# Comparators                                          : 24
+ 10-bit comparator equal                               : 4
+ 10-bit comparator greater                             : 5
+ 11-bit comparator equal                               : 1
+ 11-bit comparator greater                             : 1
+ 8-bit comparator equal                                : 2
+ 8-bit comparator greater                              : 2
+ 9-bit comparator equal                                : 5
+ 9-bit comparator greater                              : 4
+# Multiplexers                                         : 13
+ 1-bit 2-to-1 multiplexer                              : 2
+ 2-bit 2-to-1 multiplexer                              : 3
+ 8-bit 2-to-1 multiplexer                              : 6
+ 9-bit 2-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <VGA_blue_0> in Unit <VGA_bitmap_320x240> is equivalent to the following 3 FFs/Latches, which will be removed : <VGA_blue_1> <VGA_blue_2> <VGA_blue_3> 
+INFO:Xst:2261 - The FF/Latch <VGA_red_0> in Unit <VGA_bitmap_320x240> is equivalent to the following 3 FFs/Latches, which will be removed : <VGA_red_1> <VGA_red_2> <VGA_red_3> 
+INFO:Xst:2261 - The FF/Latch <VGA_green_0> in Unit <VGA_bitmap_320x240> is equivalent to the following 3 FFs/Latches, which will be removed : <VGA_green_1> <VGA_green_2> <VGA_green_3> 
+
+Optimizing unit <TestVGA> ...
+
+Optimizing unit <Top_module_VGA> ...
+
+Optimizing unit <Screen_buffer> ...
+
+Optimizing unit <window> ...
+
+Optimizing unit <VGA_bitmap_320x240> ...
+
+Optimizing unit <ScreenPainting> ...
+WARNING:Xst:2677 - Node <inst_LPM_FF> of sequential type is unconnected in block <GA>.
+INFO:Xst:2261 - The FF/Latch <adresse_0> in Unit <SP> is equivalent to the following FF/Latch, which will be removed : <X_work_0> 
+INFO:Xst:2261 - The FF/Latch <adresse_1> in Unit <SP> is equivalent to the following FF/Latch, which will be removed : <X_work_1> 
+INFO:Xst:2261 - The FF/Latch <adresse_2> in Unit <SP> is equivalent to the following FF/Latch, which will be removed : <X_work_2> 
+INFO:Xst:2261 - The FF/Latch <adresse_3> in Unit <SP> is equivalent to the following FF/Latch, which will be removed : <X_work_3> 
+INFO:Xst:2261 - The FF/Latch <adresse_4> in Unit <SP> is equivalent to the following FF/Latch, which will be removed : <X_work_4> 
+INFO:Xst:2261 - The FF/Latch <adresse_5> in Unit <SP> is equivalent to the following FF/Latch, which will be removed : <X_work_5> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block TestVGA, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 130
+ Flip-Flops                                            : 130
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : TestVGA.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 450
+#      GND                         : 5
+#      INV                         : 16
+#      LUT1                        : 44
+#      LUT2                        : 23
+#      LUT3                        : 54
+#      LUT4                        : 10
+#      LUT5                        : 47
+#      LUT6                        : 93
+#      MUXCY                       : 73
+#      VCC                         : 5
+#      XORCY                       : 80
+# FlipFlops/Latches                : 131
+#      FD                          : 1
+#      FDC                         : 39
+#      FDCE                        : 26
+#      FDE                         : 16
+#      FDP                         : 2
+#      FDR                         : 19
+#      FDRE                        : 27
+#      LDP                         : 1
+# RAMS                             : 7
+#      RAMB18E1                    : 2
+#      RAMB36E1                    : 5
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 30
+#      IBUF                        : 16
+#      OBUF                        : 14
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             131  out of  126800     0%  
+ Number of Slice LUTs:                  287  out of  63400     0%  
+    Number used as Logic:               287  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    309
+   Number with an unused Flip Flop:     178  out of    309    57%  
+   Number with an unused LUT:            22  out of    309     7%  
+   Number of fully used LUT-FF pairs:   109  out of    309    35%  
+   Number of unique control sets:        20
+
+IO Utilization: 
+ Number of IOs:                          49
+ Number of bonded IOBs:                  31  out of    210    14%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                6  out of    135     4%  
+    Number using Block RAM only:          6
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clock                              | BUFGP                  | 137   |
+VGA/W1/Y_height<0>                 | NONE(VGA/W1/X_start_4) | 1     |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+--------------------------------------------+--------------------------+-------+
+Control Signal                              | Buffer(FF name)          | Load  |
+--------------------------------------------+--------------------------+-------+
+buff/data_send_temp(buff/data_send_temp:Q)  | NONE(buff/Mram_RAM)      | 2     |
+buff2/data_send_temp(buff2/data_send_temp:Q)| NONE(buff2/Mram_RAM)     | 2     |
+VGA/GA/N15(VGA/GA/Mram_screen11:CASCADEOUTA)| NONE(VGA/GA/Mram_screen1)| 1     |
+VGA/GA/N17(VGA/GA/Mram_screen11:CASCADEOUTB)| NONE(VGA/GA/Mram_screen1)| 1     |
+VGA/GA/N19(VGA/GA/Mram_screen21:CASCADEOUTA)| NONE(VGA/GA/Mram_screen2)| 1     |
+VGA/GA/N21(VGA/GA/Mram_screen21:CASCADEOUTB)| NONE(VGA/GA/Mram_screen2)| 1     |
+--------------------------------------------+--------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.879ns (Maximum Frequency: 257.765MHz)
+   Minimum input arrival time before clock: 1.250ns
+   Maximum output required time after clock: 0.654ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock'
+  Clock period: 3.879ns (frequency: 257.765MHz)
+  Total number of paths / destination ports: 4805 / 262
+-------------------------------------------------------------------------
+Delay:               3.879ns (Levels of Logic = 6)
+  Source:            buff/Mram_RAM (RAM)
+  Destination:       VGA/W1/data_in_1 (FF)
+  Source Clock:      clock rising
+  Destination Clock: clock rising
+
+  Data Path: buff/Mram_RAM to VGA/W1/data_in_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB18E1:CLKARDCLK->DOADO4    6   1.846   0.579  Mram_RAM (Y_data<4>)
+     end scope: 'buff:Y_data<4>'
+     begin scope: 'VGA:Y_data<4>'
+     begin scope: 'VGA/W1:Y_data<4>'
+     LUT5:I1->O            2   0.097   0.383  BUS_0020_GND_10_o_equal_60_o531 (BUS_0020_GND_10_o_equal_60_o53)
+     LUT6:I4->O            1   0.097   0.379  Mmux_GND_10_o_GND_10_o_mux_67_OUT212 (Mmux_GND_10_o_GND_10_o_mux_67_OUT211)
+     LUT6:I4->O            1   0.097   0.295  Mmux_GND_10_o_GND_10_o_mux_67_OUT216 (Mmux_GND_10_o_GND_10_o_mux_67_OUT215)
+     LUT6:I5->O            1   0.097   0.000  Mmux_GND_10_o_GND_10_o_mux_67_OUT227 (GND_10_o_GND_10_o_mux_67_OUT<1>)
+     FDC:D                     0.008          data_in_1
+    ----------------------------------------
+    Total                      3.879ns (2.242ns logic, 1.638ns route)
+                                       (57.8% logic, 42.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock'
+  Total number of paths / destination ports: 130 / 130
+-------------------------------------------------------------------------
+Offset:              1.250ns (Levels of Logic = 3)
+  Source:            data2<15> (PAD)
+  Destination:       buff2/Mram_RAM (RAM)
+  Destination Clock: clock rising
+
+  Data Path: data2<15> to buff2/Mram_RAM
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.001   0.279  data2_15_IBUF (data2_15_IBUF)
+     begin scope: 'buff2:data<15>'
+     INV:I->O              1   0.113   0.279  Madd_rescaling_xor<15>11_INV_0 (rescaling<15>)
+     RAMB18E1:DIADI6           0.577          Mram_RAM
+    ----------------------------------------
+    Total                      1.250ns (0.691ns logic, 0.559ns route)
+                                       (55.3% logic, 44.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'VGA/W1/Y_height<0>'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.068ns (Levels of Logic = 3)
+  Source:            reset (PAD)
+  Destination:       VGA/W1/X_start_4 (LATCH)
+  Destination Clock: VGA/W1/Y_height<0> falling
+
+  Data Path: reset to VGA/W1/X_start_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   0.001   0.312  reset_IBUF (reset_IBUF)
+     begin scope: 'VGA:reset'
+     begin scope: 'VGA/W1:reset'
+     INV:I->O              4   0.113   0.293  reset_inv1_INV_0 (reset_inv)
+     LDP:PRE                   0.349          X_start_4
+    ----------------------------------------
+    Total                      1.068ns (0.463ns logic, 0.605ns route)
+                                       (43.4% logic, 56.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock'
+  Total number of paths / destination ports: 14 / 14
+-------------------------------------------------------------------------
+Offset:              0.654ns (Levels of Logic = 2)
+  Source:            VGA/GA/VGA_red_0 (FF)
+  Destination:       VGA_red<3> (PAD)
+  Source Clock:      clock rising
+
+  Data Path: VGA/GA/VGA_red_0 to VGA_red<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              4   0.361   0.293  VGA_red_0 (VGA_red_0)
+     end scope: 'VGA/GA:VGA_red<3>'
+     end scope: 'VGA:VGA_red<3>'
+     OBUF:I->O                 0.000          VGA_red_3_OBUF (VGA_red<3>)
+    ----------------------------------------
+    Total                      0.654ns (0.361ns logic, 0.293ns route)
+                                       (55.2% logic, 44.8% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clock
+------------------+---------+---------+---------+---------+
+                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------+---------+---------+---------+---------+
+VGA/W1/Y_height<0>|         |    3.729|         |         |
+clock             |    3.879|         |         |         |
+------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 14.00 secs
+Total CPU time to Xst completion: 13.92 secs
+ 
+--> 
+
+Total memory usage is 430360 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    7 (   0 filtered)
+Number of infos    :   17 (   0 filtered)
+

@@ -1,0 +1,5 @@
+vhdl work "ipcore_dir/clockgen.vhd"
+vhdl work "Clock_Management_I2S.vhd"
+vhdl work "I2S_Interface.vhd"
+vhdl work "clock_stereo.vhd"
+vhdl work "I2S_pmod.vhd"

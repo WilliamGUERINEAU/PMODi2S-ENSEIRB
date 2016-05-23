@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\William\Desktop\tout_fonctionnel\Test_Stereo\Linked.ncd
+OUTFILE=C:\Users\William\Desktop\tout_fonctionnel\Test_Stereo\Linked.bit
+FAMILY=Artix7
+PART=xc7a100t-3csg324
+WORKINGDIR=C:\Users\William\Desktop\tout_fonctionnel\Test_Stereo
+LICENSE=WebPack
+USER_INFO=210963000_0_0_915

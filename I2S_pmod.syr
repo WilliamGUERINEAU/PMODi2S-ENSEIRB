@@ -1,0 +1,586 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Reading design: I2S_pmod.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "I2S_pmod.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "I2S_pmod"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : I2S_pmod
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : Soft
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\William\Desktop\tout_fonctionnel\Test_Stereo\ipcore_dir\clockgen.vhd" into library work
+Parsing entity <clockgen>.
+Parsing architecture <xilinx> of entity <clockgen>.
+Parsing VHDL file "C:\Users\William\Desktop\tout_fonctionnel\Test_Stereo\Clock_Management_I2S.vhd" into library work
+Parsing entity <Clock_Management_I2S>.
+Parsing architecture <Behavioral> of entity <clock_management_i2s>.
+Parsing VHDL file "C:\Users\William\Desktop\tout_fonctionnel\Test_Stereo\I2S_Interface.vhd" into library work
+Parsing entity <I2S_Interface>.
+Parsing architecture <Behavioral> of entity <i2s_interface>.
+Parsing VHDL file "C:\Users\William\Desktop\tout_fonctionnel\Test_Stereo\clock_stereo.vhd" into library work
+Parsing entity <clock_stereo>.
+Parsing architecture <Behavioral> of entity <clock_stereo>.
+Parsing VHDL file "C:\Users\William\Desktop\tout_fonctionnel\Test_Stereo\I2S_pmod.vhd" into library work
+Parsing entity <I2S_pmod>.
+Parsing architecture <Behavioral> of entity <i2s_pmod>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <I2S_pmod> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <I2S_Interface> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <clock_stereo> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <clockgen> (architecture <xilinx>) from library <work>.
+
+Elaborating entity <Clock_Management_I2S> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <I2S_pmod>.
+    Related source file is "C:\Users\William\Desktop\tout_fonctionnel\Test_Stereo\I2S_pmod.vhd".
+    Summary:
+	no macro.
+Unit <I2S_pmod> synthesized.
+
+Synthesizing Unit <I2S_Interface>.
+    Related source file is "C:\Users\William\Desktop\tout_fonctionnel\Test_Stereo\I2S_Interface.vhd".
+    Found 1-bit register for signal <change>.
+    Found 4-bit register for signal <bit_count>.
+    Found 1-bit register for signal <data_out>.
+    Found 16-bit register for signal <hold_data>.
+    Found 4-bit subtractor for signal <GND_5_o_GND_5_o_sub_4_OUT<3:0>> created at line 51.
+    Found 1-bit 16-to-1 multiplexer for signal <bit_count[3]_next_data[15]_Mux_1_o> created at line 45.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  22 D-type flip-flop(s).
+	inferred  18 Multiplexer(s).
+Unit <I2S_Interface> synthesized.
+
+Synthesizing Unit <clock_stereo>.
+    Related source file is "C:\Users\William\Desktop\tout_fonctionnel\Test_Stereo\clock_stereo.vhd".
+    Summary:
+	no macro.
+Unit <clock_stereo> synthesized.
+
+Synthesizing Unit <clockgen>.
+    Related source file is "C:\Users\William\Desktop\tout_fonctionnel\Test_Stereo\ipcore_dir\clockgen.vhd".
+    Summary:
+	no macro.
+Unit <clockgen> synthesized.
+
+Synthesizing Unit <Clock_Management_I2S>.
+    Related source file is "C:\Users\William\Desktop\tout_fonctionnel\Test_Stereo\Clock_Management_I2S.vhd".
+    Found 1-bit register for signal <sck_temp>.
+    Found 3-bit register for signal <sck_count>.
+    Found 8-bit register for signal <lrck_count>.
+    Found 1-bit register for signal <lrck_temp>.
+    Found 8-bit adder for signal <lrck_count[7]_GND_44_o_add_1_OUT> created at line 48.
+    Found 3-bit adder for signal <sck_count[2]_GND_44_o_add_5_OUT> created at line 68.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  13 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <Clock_Management_I2S> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 3-bit adder                                           : 1
+ 4-bit subtractor                                      : 1
+ 8-bit adder                                           : 1
+# Registers                                            : 8
+ 1-bit register                                        : 4
+ 16-bit register                                       : 1
+ 3-bit register                                        : 1
+ 4-bit register                                        : 1
+ 8-bit register                                        : 1
+# Multiplexers                                         : 20
+ 1-bit 16-to-1 multiplexer                             : 1
+ 1-bit 2-to-1 multiplexer                              : 16
+ 3-bit 2-to-1 multiplexer                              : 1
+ 4-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <Clock_Management_I2S>.
+The following registers are absorbed into counter <sck_count>: 1 register on signal <sck_count>.
+The following registers are absorbed into counter <lrck_count>: 1 register on signal <lrck_count>.
+Unit <Clock_Management_I2S> synthesized (advanced).
+
+Synthesizing (advanced) Unit <I2S_Interface>.
+The following registers are absorbed into counter <bit_count>: 1 register on signal <bit_count>.
+Unit <I2S_Interface> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 3
+ 3-bit up counter                                      : 1
+ 4-bit down counter                                    : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 20
+ Flip-Flops                                            : 20
+# Multiplexers                                         : 17
+ 1-bit 16-to-1 multiplexer                             : 1
+ 1-bit 2-to-1 multiplexer                              : 16
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <I2S_pmod> ...
+
+Optimizing unit <clock_stereo> ...
+
+Optimizing unit <clockgen> ...
+
+Optimizing unit <I2S_Interface> ...
+
+Optimizing unit <Clock_Management_I2S> ...
+INFO:Xst:2261 - The FF/Latch <sck_count_0> in Unit <Clock_manag> is equivalent to the following FF/Latch, which will be removed : <lrck_count_0> 
+INFO:Xst:2261 - The FF/Latch <sck_count_1> in Unit <Clock_manag> is equivalent to the following FF/Latch, which will be removed : <lrck_count_1> 
+INFO:Xst:2261 - The FF/Latch <sck_count_2> in Unit <Clock_manag> is equivalent to the following FF/Latch, which will be removed : <lrck_count_2> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block I2S_pmod, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 32
+ Flip-Flops                                            : 32
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : I2S_pmod.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 60
+#      GND                         : 2
+#      INV                         : 5
+#      LUT2                        : 3
+#      LUT3                        : 4
+#      LUT4                        : 2
+#      LUT5                        : 14
+#      LUT6                        : 14
+#      MUXCY                       : 7
+#      MUXF7                       : 2
+#      MUXF8                       : 1
+#      VCC                         : 1
+#      XORCY                       : 5
+# FlipFlops/Latches                : 32
+#      FDC                         : 1
+#      FDC_1                       : 1
+#      FDE_1                       : 16
+#      FDP                         : 13
+#      FDP_1                       : 1
+# Clock Buffers                    : 5
+#      BUFG                        : 4
+#      BUFGP                       : 1
+# IO Buffers                       : 38
+#      IBUF                        : 33
+#      OBUF                        : 5
+# Others                           : 1
+#      MMCME2_ADV                  : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              32  out of  126800     0%  
+ Number of Slice LUTs:                   42  out of  63400     0%  
+    Number used as Logic:                42  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     61
+   Number with an unused Flip Flop:      29  out of     61    47%  
+   Number with an unused LUT:            19  out of     61    31%  
+   Number of fully used LUT-FF pairs:    13  out of     61    21%  
+   Number of unique control sets:         4
+
+IO Utilization: 
+ Number of IOs:                          39
+ Number of bonded IOBs:                  39  out of    210    18%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                5  out of     32    15%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------+------------------------+-------+
+Clock Signal                         | Clock buffer(FF name)  | Load  |
+-------------------------------------+------------------------+-------+
+clock_stereo_TOP/Clock_manag/sck_temp| BUFG                   | 22    |
+clock_stereo_TOP/Gen/clkout0         | BUFG                   | 10    |
+-------------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 2.286ns (Maximum Frequency: 437.464MHz)
+   Minimum input arrival time before clock: 1.905ns
+   Maximum output required time after clock: 0.650ns
+   Maximum combinational path delay: 0.000ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock_stereo_TOP/Clock_manag/sck_temp'
+  Clock period: 2.130ns (frequency: 469.528MHz)
+  Total number of paths / destination ports: 138 / 22
+-------------------------------------------------------------------------
+Delay:               2.130ns (Levels of Logic = 4)
+  Source:            I2S_mod/hold_data_4 (FF)
+  Destination:       I2S_mod/data_out (FF)
+  Source Clock:      clock_stereo_TOP/Clock_manag/sck_temp falling
+  Destination Clock: clock_stereo_TOP/Clock_manag/sck_temp falling
+
+  Data Path: I2S_mod/hold_data_4 to I2S_mod/data_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE_1:C->Q            2   0.364   0.688  hold_data_4 (hold_data_4)
+     LUT5:I0->O            1   0.097   0.379  Mmux_bit_count[3]_next_data[15]_Mux_1_o_51_SW2 (N2)
+     LUT5:I3->O            1   0.097   0.000  Mmux_bit_count[3]_next_data[15]_Mux_1_o_51 (Mmux_bit_count[3]_next_data[15]_Mux_1_o_51)
+     MUXF7:I1->O           1   0.279   0.000  Mmux_bit_count[3]_next_data[15]_Mux_1_o_4_f7 (Mmux_bit_count[3]_next_data[15]_Mux_1_o_4_f7)
+     MUXF8:I0->O           1   0.218   0.000  Mmux_bit_count[3]_next_data[15]_Mux_1_o_2_f8 (bit_count[3]_next_data[15]_Mux_1_o)
+     FDC_1:D                   0.008          data_out
+    ----------------------------------------
+    Total                      2.130ns (1.063ns logic, 1.067ns route)
+                                       (49.9% logic, 50.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock_stereo_TOP/Gen/clkout0'
+  Clock period: 2.286ns (frequency: 437.464MHz)
+  Total number of paths / destination ports: 315 / 10
+-------------------------------------------------------------------------
+Delay:               2.286ns (Levels of Logic = 10)
+  Source:            clock_stereo_TOP/Clock_manag/sck_count_2 (FF)
+  Destination:       clock_stereo_TOP/Clock_manag/lrck_count_7 (FF)
+  Source Clock:      clock_stereo_TOP/Gen/clkout0 rising
+  Destination Clock: clock_stereo_TOP/Gen/clkout0 rising
+
+  Data Path: clock_stereo_TOP/Clock_manag/sck_count_2 to clock_stereo_TOP/Clock_manag/lrck_count_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              4   0.361   0.525  sck_count_2 (sck_count_2)
+     LUT3:I0->O           10   0.097   0.337  PWR_13_o_sck_count[2]_equal_5_o<2>1 (PWR_13_o_sck_count[2]_equal_5_o)
+     LUT6:I5->O            1   0.097   0.000  Mcount_lrck_count_lut<0> (Mcount_lrck_count_lut<0>)
+     MUXCY:S->O            1   0.353   0.000  Mcount_lrck_count_cy<0> (Mcount_lrck_count_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_lrck_count_cy<1> (Mcount_lrck_count_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_lrck_count_cy<2> (Mcount_lrck_count_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_lrck_count_cy<3> (Mcount_lrck_count_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_lrck_count_cy<4> (Mcount_lrck_count_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_lrck_count_cy<5> (Mcount_lrck_count_cy<5>)
+     MUXCY:CI->O           0   0.023   0.000  Mcount_lrck_count_cy<6> (Mcount_lrck_count_cy<6>)
+     XORCY:CI->O           1   0.370   0.000  Mcount_lrck_count_xor<7> (Mcount_lrck_count7)
+     FDP:D                     0.008          lrck_count_7
+    ----------------------------------------
+    Total                      2.286ns (1.424ns logic, 0.862ns route)
+                                       (62.3% logic, 37.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock_stereo_TOP/Clock_manag/sck_temp'
+  Total number of paths / destination ports: 54 / 39
+-------------------------------------------------------------------------
+Offset:              1.905ns (Levels of Logic = 6)
+  Source:            data_r<5> (PAD)
+  Destination:       I2S_mod/data_out (FF)
+  Destination Clock: clock_stereo_TOP/Clock_manag/sck_temp falling
+
+  Data Path: data_r<5> to I2S_mod/data_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.001   0.693  data_r_5_IBUF (data_r_5_IBUF)
+     begin scope: 'I2S_mod:data_l<5>'
+     LUT6:I0->O            1   0.097   0.511  Mmux_bit_count[3]_next_data[15]_Mux_1_o_51_SW0 (N01)
+     LUT5:I2->O            1   0.097   0.000  Mmux_bit_count[3]_next_data[15]_Mux_1_o_51 (Mmux_bit_count[3]_next_data[15]_Mux_1_o_51)
+     MUXF7:I1->O           1   0.279   0.000  Mmux_bit_count[3]_next_data[15]_Mux_1_o_4_f7 (Mmux_bit_count[3]_next_data[15]_Mux_1_o_4_f7)
+     MUXF8:I0->O           1   0.218   0.000  Mmux_bit_count[3]_next_data[15]_Mux_1_o_2_f8 (bit_count[3]_next_data[15]_Mux_1_o)
+     FDC_1:D                   0.008          data_out
+    ----------------------------------------
+    Total                      1.905ns (0.700ns logic, 1.205ns route)
+                                       (36.8% logic, 63.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock_stereo_TOP/Gen/clkout0'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              1.073ns (Levels of Logic = 3)
+  Source:            reset (PAD)
+  Destination:       clock_stereo_TOP/Clock_manag/sck_count_0 (FF)
+  Destination Clock: clock_stereo_TOP/Gen/clkout0 rising
+
+  Data Path: reset to clock_stereo_TOP/Clock_manag/sck_count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   0.001   0.289  reset_IBUF (reset_IBUF)
+     begin scope: 'clock_stereo_TOP:reset'
+     begin scope: 'clock_stereo_TOP/Clock_manag:reset'
+     INV:I->O             10   0.113   0.321  reset_inv1_INV_0 (reset_inv)
+     FDP:PRE                   0.349          lrck_count_3
+    ----------------------------------------
+    Total                      1.073ns (0.463ns logic, 0.610ns route)
+                                       (43.2% logic, 56.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock_stereo_TOP/Clock_manag/sck_temp'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.643ns (Levels of Logic = 2)
+  Source:            I2S_mod/data_out (FF)
+  Destination:       data_out (PAD)
+  Source Clock:      clock_stereo_TOP/Clock_manag/sck_temp falling
+
+  Data Path: I2S_mod/data_out to data_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC_1:C->Q            1   0.364   0.279  data_out (data_out)
+     end scope: 'I2S_mod:data_out'
+     OBUF:I->O                 0.000          data_out_OBUF (data_out)
+    ----------------------------------------
+    Total                      0.643ns (0.364ns logic, 0.279ns route)
+                                       (56.6% logic, 43.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock_stereo_TOP/Gen/clkout0'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.650ns (Levels of Logic = 2)
+  Source:            clock_stereo_TOP/Clock_manag/lrck_temp (FF)
+  Destination:       LRCK (PAD)
+  Source Clock:      clock_stereo_TOP/Gen/clkout0 rising
+
+  Data Path: clock_stereo_TOP/Clock_manag/lrck_temp to LRCK
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.361   0.289  lrck_temp (lrck_temp)
+     end scope: 'clock_stereo_TOP/Clock_manag:LRCK'
+     end scope: 'clock_stereo_TOP:LRCK'
+     OBUF:I->O                 0.000          LRCK_OBUF (LRCK)
+    ----------------------------------------
+    Total                      0.650ns (0.361ns logic, 0.289ns route)
+                                       (55.5% logic, 44.5% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               0.000ns (Levels of Logic = 2)
+  Source:            clock (PAD)
+  Destination:       clock_stereo_TOP/Gen/mmcm_adv_inst:CLKIN1 (PAD)
+
+  Data Path: clock to clock_stereo_TOP/Gen/mmcm_adv_inst:CLKIN1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     BUFGP:I->O            0   0.000   0.000  clock_BUFGP (clock_BUFGP)
+     begin scope: 'clock_stereo_TOP:clock'
+     begin scope: 'clock_stereo_TOP/Gen:CLK_100M'
+    MMCME2_ADV:CLKIN1          0.000          mmcm_adv_inst
+    ----------------------------------------
+    Total                      0.000ns (0.000ns logic, 0.000ns route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clock_stereo_TOP/Clock_manag/sck_temp
+-------------------------------------+---------+---------+---------+---------+
+                                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------------------+---------+---------+---------+---------+
+clock_stereo_TOP/Clock_manag/sck_temp|         |         |    2.130|         |
+-------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clock_stereo_TOP/Gen/clkout0
+----------------------------+---------+---------+---------+---------+
+                            | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------+---------+---------+---------+---------+
+clock_stereo_TOP/Gen/clkout0|    2.286|         |         |         |
+----------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 10.34 secs
+ 
+--> 
+
+Total memory usage is 429104 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+
